@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MAA AMBA TRAVEL AGENCY – Rentals with Driver | Sightseeing • Pickup & Drop • Outstation</title>
+  <meta name="description" content="Reliable vehicles with professional drivers for local sightseeing, pickup & drop, and multi‑day outstation trips. Call or WhatsApp to book." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+     html {
+      scroll-behavior: smooth;
+    }
+    :root{
+      --bg:#ffffff;          /* page background */
+      --panel:#0b0909;       /* card background */
+      --muted:#97a3b6;       /* secondary text */
+      --text:#e8eef7;        /* primary text */
+      --accent:#22c55e;      /* buttons, highlights */
+      --accent-2:#38bdf8;    /* subtle accents */
+      --warning:#f59e0b;     /* badges */
+      --radius:18px;
+      --shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0b0f13 0%,#0c1118 100%);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block;border-radius:14px}
+    .container{max-width:1160px;margin:0 auto;padding:0 16px}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:rgba(11,15,19,.72);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .brand-logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#0ea5e9)}
+    .brand h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.2px}
+    .actions{display:flex;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:var(--panel);color:var(--text);box-shadow:var(--shadow);transition:.2s ease}
+    .btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.18)}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),#16a34a);border:none;color:#07140b}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,.18)}
+    .hero{padding:56px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
+    .hero h2{font-size:44px;line-height:1.06;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 16px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.35);color:#c8f1ff;font-size:12px;font-weight:600}
+    .panel{background:radial-gradient(1200px 400px at 0% 0%, rgba(56,189,248,.08), rgba(0,0,0,0) 60%), var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .services{padding:10px 0 6px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card h3{margin:6px 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .fleet{padding:24px 0 40px}
+    .fleet h3{font-size:28px;margin:0 0 10px}
+    .filters{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 18px}
+    .chip{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);font-size:14px;cursor:pointer}
+    .chip.active{background:rgba(34,197,94,.18);border-color:rgba(34,197,94,.65)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .vehicle{display:flex;flex-direction:column;gap:12px}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06)}
+    .price{font-weight:700;font-size:16px}
+    .cta-row{display:flex;gap:10px;margin-top:2px}
+    footer{padding:22px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
+    .floating-wa{position:fixed;right:16px;bottom:16px;z-index:60}
+    .floating-wa .btn{padding:14px 16px}
+    @media (max-width:1000px){
+      .hero-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .hero h2{font-size:34px}
+
+    }
+  </style>
+  <script type="application/ld+json" id="seo-jsonld">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "MAA AMBA TRAVEL AGENCY",
+      "image": ["/assets/cover.jpg"],
+      "description": "Vehicles with driver for sightseeing, pickup & drop, and multi‑day outstation trips.",
+      "telephone": "+918340164252",
+      "areaServed": "GHATSHILA, JHARKHAND",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Your street & landmark",
+        "addressLocality": "GHATSHILA",
+        "addressRegion": "JHARKHAND",
+        "postalCode": "000000",
+        "addressCountry": "IN"
+      },
+      "sameAs": []
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <h1 id="brandName">MAA AMBA TRAVEL AGENCY</h1>
+      </div>
+      <div class="actions">
+        <a id="callHeader" class="btn btn-outline" href="#">Call</a>
+        <a id="waHeader" class="btn btn-primary" href="#">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="badge">Reliable • On‑Time • Local Drivers</span>
+          <h2>Comfortable Travel with Professional Drivers</h2>
+          <p>We provide vehicles with drivers for <strong>local sightseeing</strong>, <strong>pickup & drop</strong> (in‑state/out‑of‑state), and <strong>multi‑day trips</strong>. Talk price over a quick call or WhatsApp—simple and old‑school.</p>
+          <div class="actions" style="margin-top:10px">
+            <a id="ctaCall1" class="btn btn-primary" href="#">Call Now</a>
+            <a id="ctaWA1" class="btn" href="#">WhatsApp Us</a>
+          </div>
+        </div>
+        <div class="panel">
+          <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format&fit=crop" alt="Clean car interior" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <div class="cards">
+        <div class="panel card">
+          <h3>Sightseeing Tours</h3>
+          <p>Custom local itineraries with knowledgeable drivers. Flexible hours and multiple stops.</p>
+        </div>
+        <div class="panel card">
+          <h3>Pickup & Drop</h3>
+          <p>Airport, station, intercity & out‑of‑state transfers. Transparent rates, no hidden fees.</p>
+        </div>
+        <div class="panel card">
+          <h3>Multi‑Day Trips</h3>
+          <p>Vacations, pilgrimages, weddings. Round trips with reliable drivers and comfortable vehicles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLEET -->
+    <section class="fleet">
+      <h3>Available Vehicles & Average Prices</h3>
+      <p class="" style="color:var(--muted);margin:6px 0 12px">Indicative pricing. Final quote depends on route, duration, tolls & season. Contact us for exact price.</p>
+
+      <div class="filters" aria-label="Quick filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="sedan">Sedan</button>
+        <button class="chip" data-filter="suv">SUV</button>
+        <button class="chip" data-filter="traveller">Tempo Traveller</button>
+        <button class="chip" data-filter="premium">Premium</button>
+      </div>
+
+      <div id="fleetGrid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="panel" id="contact" style="margin-bottom:22px">
+      <h3 style="margin:0 0 8px">Contact Us</h3>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+        <div style="flex:1 1 260px">
+          <p style="margin:6px 0;color:var(--muted)">Prefer talking to a person? We do too. Message on WhatsApp or call us for instant quotes and bookings.</p>
+          <div class="cta-row">
+            <a id="ctaCall2" class="btn btn-primary" href="#">Call Now</a>
+            <a id="ctaWA2" class="btn" href="#">WhatsApp</a>
+          </div>
+        </div>
+        <div style="flex:1 1 320px">
+          <!-- Optional: Replace the src with your Google Maps embed URL -->
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="City map and car keys" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> <span id="brandNameFooter">YOUR AGENCY NAME</span>. All rights reserved.</div>
+      <div>Made with care for comfortable journeys.</div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="floating-wa">
+    <a id="waFloat" class="btn btn-primary" href="#" aria-label="Chat on WhatsApp">WhatsApp</a>
+  </div>
+
+  <script>
+    // ====== CONFIG – EDIT THESE ONLY ======
+    const CONFIG = {
+      AGENCY_NAME: 'MAA AMBA TRAVEL AGAENCY',
+      PHONE: '+918340164252',              // e.g., +919876543210
+      WHATSAPP: '+918340164252',           // must include country code, no spaces
+      CITY: 'GHATHSILA',
+      STATE: 'JHARKHAND',
+      BASE_PRICING_NOTE: 'Prices are indicative. Toll, parking & driver allowance extra as applicable.'
+    };
+
+    // Your fleet. Add/remove items as needed.
+    /**
+     * Fields:
+     * id, name, type: 'sedan'|'suv'|'traveller'|'premium'
+     * seats, bags, ac: boolean, fuel: 'Petrol'|'Diesel'
+     * perKm, perDay, img, features: []
+     */
+    const VEHICLES = [
+      {
+        id:'dzire', name:'Maruti Dzire', type:'sedan', seats:4, bags:2, ac:true, fuel:'Petrol',
+        perKm: 12, perDay: 2500,
+        img:'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format&fit=crop',
+        features:['AC','Music System','Clean Interiors']
+      },
+      {
+        id:'etios', name:'Toyota Etios', type:'sedan', seats:4, bags:3, ac:true, fuel:'Diesel',
+        perKm: 13, perDay: 2600,
+        img:'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop',
+        features:['Spacious Boot','AC','USB Charging']
+      },
+      {
+        id:'ertiga', name:'Maruti Ertiga', type:'suv', seats:6, bags:3, ac:true, fuel:'Petrol',
+        perKm: 15, perDay: 3200,
+        img:'https://images.unsplash.com/photo-1549923746-c502d488b3ea?q=80&w=1600&auto=format&fit=crop',
+        features:['Captain Seats (Mid)','Rear AC Vents','Bluetooth']
+      },
+      {
+        id:'innova', name:'Toyota Innova Crysta', type:'suv', seats:6, bags:4, ac:true, fuel:'Diesel',
+        perKm: 18, perDay: 4200,
+        img:'https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1600&auto=format&fit=crop',
+        features:['Premium Comfort','Rear AC','Large Boot']
+      },
+      {
+        id:'traveller12', name:'Tempo Traveller 12-Seater', type:'traveller', seats:12, bags:8, ac:true, fuel:'Diesel',
+        perKm: 24, perDay: 6500,
+        img:'https://images.unsplash.com/photo-1519758965401-0f9857337f9e?q=80&w=1600&auto=format&fit=crop',
+        features:['High Roof','Pushback Seats','Aux & USB']
+      },
+      {
+        id:'sedan-prem', name:'Hyundai Verna (Premium)', type:'premium', seats:4, bags:3, ac:true, fuel:'Petrol',
+        perKm: 17, perDay: 3800,
+        img:'https://images.unsplash.com/photo-1549921296-3ecf7f58b1a8?q=80&w=1600&auto=format&fit=crop',
+        features:['Leather Interiors','Fast AC','Android Auto']
+      }
+    ];
+
+    // ====== RENDER LOGIC ======
+    const brandNameEls = [document.getElementById('brandName'), document.getElementById('brandNameFooter')];
+    brandNameEls.forEach(el => el.textContent = CONFIG.AGENCY_NAME);
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const telHref = `tel:${CONFIG.PHONE.replace(/\s/g,'')}`;
+    const waBase = `https://wa.me/${CONFIG.WHATSAPP.replace(/[^\d]/g,'')}`;
+    const waMsg = encodeURIComponent(`Hello ${CONFIG.AGENCY_NAME}, I’d like to enquire about a vehicle.`);
+
+    const callLinks = [document.getElementById('callHeader'), document.getElementById('ctaCall1'), document.getElementById('ctaCall2')];
+    const waLinks = [document.getElementById('waHeader'), document.getElementById('ctaWA1'), document.getElementById('ctaWA2'), document.getElementById('waFloat')];
+
+    callLinks.forEach(a => a && (a.href = telHref));
+    waLinks.forEach(a => a && (a.href = `${waBase}?text=${waMsg}`));
+
+    // Filters
+    const grid = document.getElementById('fleetGrid');
+    const chips = Array.from(document.querySelectorAll('.chip'));
+    let currentFilter = 'all';
+
+    chips.forEach(ch => ch.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      ch.classList.add('active');
+      currentFilter = ch.dataset.filter;
+      render();
+    }));
+
+    function currencyINR(n){
+      return new Intl.NumberFormat('en-IN', {style:'currency', currency:'INR', maximumFractionDigits:0}).format(n);
+    }
+
+    function vehicleCard(v){
+      const msg = encodeURIComponent(`Hello ${CONFIG.AGENCY_NAME}, I’m interested in ${v.name}. Please share price for ${v.perKm}/km or ${currencyINR(v.perDay)}/day. City: ${CONFIG.CITY}.`);
+      return `
+        <article class="panel vehicle" data-type="${v.type}">
+          <img src="${v.img}" alt="${v.name}" loading="lazy" />
+          <div style="display:flex;justify-content:space-between;gap:8px;align-items:center">
+            <h4 style="margin:0;font-size:18px">${v.name}</h4>
+            <span class="pill">${v.type.toUpperCase()}</span>
+          </div>
+          <div class="meta">
+            <span class="pill" title="Seating"><strong>Seats:</strong> ${v.seats}</span>
+            <span class="pill" title="Bags"><strong>Bags:</strong> ${v.bags}</span>
+            <span class="pill" title="Fuel"><strong>Fuel:</strong> ${v.fuel}</span>
+            <span class="pill" title="AC"><strong>AC:</strong> ${v.ac ? 'Yes' : 'No'}</span>
+          </div>
+          <div class="meta">
+            <span class="price pill">Avg: ${v.perKm}/km</span>
+            <span class="price pill">Or ${currencyINR(v.perDay)}/day</span>
+          </div>
+          <div class="meta" style="gap:6px">${v.features.map(f=>`<span class='pill'>${f}</span>`).join('')}</div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="${waBase}?text=${msg}">WhatsApp Enquiry</a>
+            <a class="btn" href="${telHref}">Call</a>
+          </div>
+        </article>`;
+    }
+
+    function render(){
+      const list = VEHICLES.filter(v => currentFilter==='all' ? true : v.type===currentFilter);
+      grid.innerHTML = list.map(vehicleCard).join('');
+    }
+
+    render();
+
+    // Update JSON-LD dynamically with real values
+    (function updateSEO(){
+      const node = document.getElementById('seo-jsonld');
+      try{
+        const data = JSON.parse(node.textContent);
+        data.name = CONFIG.AGENCY_NAME;
+        data.telephone = CONFIG.PHONE;
+        data.address.addressLocality = CONFIG.CITY;
+        data.address.addressRegion = CONFIG.STATE;
+        node.textContent = JSON.stringify(data);
+      } catch(e){/* noop */}
+    })();
+  </script>
+</body>
+</html>
